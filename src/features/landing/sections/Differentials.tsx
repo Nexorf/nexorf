@@ -4,6 +4,7 @@ import {useEffect, useRef, useState} from "react";
 import {Palette, Shield, Users, User, Cloud, RefreshCw} from "lucide-react";
 import {cn} from "@/shared/utils/utils";
 import {GlowingEffect} from "@/shared/ui/organisms/glowing/GlowingEffect";
+import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card";
 
 const differentials = [
     {
@@ -106,44 +107,61 @@ interface CardProps {
     title: string;
     description: string;
     className?: string;
-    onClick?: () => void;
-    href?: string;
     style?: React.CSSProperties;
 }
 
 const DifferentialCard = ({icon, title, description, className}: CardProps) => {
     return (
-        <li className={cn("min-h-[14rem] list-none", className)}>
-            <div
-                className="relative h-full p-4 rounded-b md:rounded-3xl border border-neutral-200 bg-white transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900">
-                <GlowingEffect
-                    spread={40}
-                    glow={true}
-                    disabled={false}
-                    proximity={64}
-                    inactiveZone={0.01}
-                    borderWidth={3}
-                />
+        <HoverCard>
+            <li className={cn("min-h-[14rem] list-none", className)}>
                 <div
-                    className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 z-10">
-                    <div className="group flex flex-1 flex-col justify-between gap-3">
-                        {/* Icon */}
-                        <div className="w-fit rounded-lg p-2 group-hover:scale-125 transition-transform duration-300">
-                            {icon}
-                        </div>
+                    className="relative h-full p-4 rounded-b md:rounded-3xl border border-neutral-200 bg-white transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900">
+                    <GlowingEffect
+                        spread={40}
+                        glow={true}
+                        disabled={false}
+                        proximity={64}
+                        inactiveZone={0.01}
+                        borderWidth={3}
+                    />
+                    <div
+                        className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 z-10">
+                        <HoverCardTrigger asChild>
+                            <div className="group flex flex-1 flex-col justify-between gap-3">
+                                {/* Icon */}
+                                <div
+                                    className="w-fit rounded-lg p-2 group-hover:scale-125 transition-transform duration-300">
+                                    {icon}
+                                </div>
 
-                        {/* Text */}
-                        <div className="space-y-2 group-hover:scale-105 transition-transform duration-300">
-                            <h3 className="text-xl font-semibold">
-                                {title}
-                            </h3>
-                            <p className="text-sm text-gray-700 dark:text-gray-400">
-                                {description}
-                            </p>
-                        </div>
+                                {/* Text */}
+                                <div className="space-y-2 group-hover:scale-105 transition-transform duration-300">
+                                    <h3 className="text-xl font-semibold">
+                                        {title}
+                                    </h3>
+                                    <p className="text-sm text-gray-700 dark:text-gray-400">
+                                        {description}
+                                    </p>
+                                </div>
+                            </div>
+                        </HoverCardTrigger>
+                        <HoverCardContent className="w-80">
+                            <div className="flex justify-between gap-4">
+                                <div className="space-y-1">
+                                    <h4 className="text-sm font-semibold">@nextjs</h4>
+                                    <p className="text-sm">
+                                        The React Framework – created and maintained by @vercel.
+                                    </p>
+                                    <div className="text-muted-foreground text-xs">
+                                        Joined December 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </HoverCardContent>
                     </div>
                 </div>
-            </div>
-        </li>
-    );
+            </li>
+        </HoverCard>
+    )
+        ;
 };

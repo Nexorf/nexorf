@@ -1,4 +1,5 @@
 import {cn} from "@/shared/utils/utils";
+import {GlowingEffect} from "@/shared/ui/organisms/glowing/GlowingEffect";
 
 export const BentoGrid = ({
                               className,
@@ -10,7 +11,7 @@ export const BentoGrid = ({
     return (
         <div
             className={cn(
-                "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
+                "mx-auto grid max-w-7xl grid-cols-1 gap-8 md:auto-rows-[18rem] md:grid-cols-3",
                 className,
             )}
         >
@@ -45,16 +46,16 @@ export const BentoGridItem = ({
                 className,
             )}
         >
-            {header}
-            <div className="transition duration-200 group-hover/bento:translate-x-2">
-                {icon}
-                <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
-                    {title}
+                {header}
+                <div className="transition duration-200 group-hover/bento:translate-x-2">
+                    {icon}
+                    <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
+                        {title}
+                    </div>
+                    <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
+                        {description}
+                    </div>
                 </div>
-                <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
-                    {description}
-                </div>
-            </div>
         </Wrapper>
     );
 };

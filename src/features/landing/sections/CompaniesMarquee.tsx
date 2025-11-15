@@ -1,7 +1,7 @@
 "use client";
 
-import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/shared/utils/utils";
+import {Marquee} from "@/shared/ui/organisms/magicui/marquee";
 
 const companyLogos = [
     "https://logos-world.net/wp-content/uploads/2020/04/Google-Logo.png",
@@ -22,11 +22,11 @@ export function CompaniesMarquee() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                     Empresas que confían en nosotros
                 </h2>
+                <div className="w-20 h-1 mx-auto mt-6 rounded-full bg-gradient-to-r mb-8 from-blue-600 to-blue-900" />
                 <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
                     Colaboramos con líderes de la industria para ofrecer soluciones de
                     calidad y alto impacto.
                 </p>
-                <div className="w-20 h-1 mx-auto mt-6 rounded-full bg-gradient-to-r from-blue-600 to-blue-900" />
             </div>
 
             <Marquee pauseOnHover className="[--duration:20s] flex gap-10 px-4 mb-6">

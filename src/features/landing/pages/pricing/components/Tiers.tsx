@@ -60,7 +60,7 @@ export function Tiers() {
                         onClick={() => setIsAnnual(!isAnnual)}
                         className={clsx(
                             "w-12 h-6 flex items-center bg-gray-300 rounded-full p-1 transition",
-                            isAnnual && "bg-green-500"
+                            isAnnual && "from-blue-600 to-blue-900 bg-gradient-to-r",
                         )}
                     >
             <span
@@ -116,7 +116,7 @@ export function Tiers() {
                             exit={{ opacity: 0 }}
                         >
                             <motion.div
-                                className="bg-white dark:bg-gray-900 rounded-xl p-8 w-full max-w-lg relative"
+                                className="bg-white dark:bg-gray-900 rounded-xl p-8 w-full max-w-screen-2xl relative"
                                 initial={{ scale: 0.8 }}
                                 animate={{ scale: 1 }}
                                 exit={{ scale: 0.8 }}
@@ -132,7 +132,7 @@ export function Tiers() {
                                 <p className="text-3xl font-bold text-black dark:text-white mb-4">
                                     {isAnnual ? calculatePrice(active.price) : active.price}
                                 </p>
-                                <div className="text-sm text-gray-600 dark:text-gray-300">{active.content()}</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-300">{active.specifications()}</div>
                                 <a href={active.ctaLink} className="block mt-6">
                                     <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                                         {active.ctaText}

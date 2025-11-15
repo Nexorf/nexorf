@@ -82,7 +82,7 @@ export function Services() {
 
     return (
         <section id="services" ref={sectionRef} className="py-20 px-4">
-            <div className="container mx-auto">
+            <div className="container mx-auto max-w-7xl">
                 <div
                     className={`transition-all duration-1000 ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -96,7 +96,7 @@ export function Services() {
                         </p>
                     </div>
 
-                    <BentoGrid className="max-w-6xl mx-auto">
+                    <BentoGrid className="max-w-7xl mx-auto">
                         {services.map((service, index) => (
                             <BentoGridItem
                                 key={index}

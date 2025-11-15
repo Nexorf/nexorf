@@ -1,10 +1,10 @@
 "use client";
 
 import { Play, ImageIcon, Video, MessageCircle, Settings, Zap, Database, Server, Users } from "lucide-react";
-import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { cn } from "@/shared/utils/utils";
-import {AnimatedList, AnimatedListDemo} from "@/components/magicui/animated-list";
-import { Marquee } from "@/components/magicui/marquee";
+import {AnimatedList, AnimatedListDemo} from "@/shared/ui/organisms/magicui/animated-list";
+import {Marquee} from "@/shared/ui/organisms/magicui/marquee";
+import {BentoCard, BentoGrid} from "@/shared/ui/organisms/magicui/bento-grid";
 
 const resources = [
     {
@@ -12,27 +12,9 @@ const resources = [
         name: "Demos Interactivas",
         description: "Prueba nuestros sistemas en tiempo real.",
         action: "Ver Demo",
-        className: "col-span-3 lg:col-span-2",
-        background: (
-            <Marquee pauseOnHover className="absolute inset-0 opacity-20 dark:opacity-10 [--duration:25s]">
-                {[...Array(10)].map((_, i) => (
-                    <Play key={i} className="mx-6 text-blue-500 dark:text-blue-400" size={48} />
-                ))}
-            </Marquee>
-        ),
-    },
-    {
-        Icon: ImageIcon,
-        name: "Catálogos Visuales",
-        description: "Explora nuestros proyectos y casos de éxito.",
-        action: "Ver Catálogo",
         className: "col-span-3 lg:col-span-1",
         background: (
-            <Marquee reverse pauseOnHover className="absolute inset-0 opacity-20 dark:opacity-10 [--duration:30s]">
-                {[...Array(8)].map((_, i) => (
-                    <ImageIcon key={i} className="mx-6 text-green-500 dark:text-green-400" size={48} />
-                ))}
-            </Marquee>
+            <AnimatedListDemo className="absolute right-0 top-2 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
         ),
     },
     {
@@ -42,7 +24,6 @@ const resources = [
         action: "Ver Videos",
         className: "col-span-3 lg:col-span-1",
         background: (
-            // Lista animada con mensajes de video
             <AnimatedList className="absolute inset-0 p-4 scale-75 opacity-30 dark:opacity-20">
                 {[...Array(5)].map((_, i) => (
                     <figure
@@ -63,26 +44,7 @@ const resources = [
         name: "Configuración Avanzada",
         description: "Personaliza tu experiencia con opciones detalladas.",
         action: "Configurar",
-        className: "col-span-3 lg:col-span-2",
-        background: (
-            <AnimatedList className="absolute inset-0 p-4 opacity-20 dark:opacity-10">
-                {["Opciones", "Preferencias", "Seguridad", "Notificaciones"].map((item, i) => (
-                    <figure
-                        key={i}
-                        className="mb-2 rounded-md bg-gray-200 bg-opacity-30 p-2 text-center font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300"
-                    >
-                        {item}
-                    </figure>
-                ))}
-            </AnimatedList>
-        ),
-    },
-    {
-        Icon: MessageCircle,
-        name: "Atención Personalizada",
-        description: "Resolvemos todas tus dudas de forma directa.",
-        action: "Contactar",
-        className: "col-span-3 lg:col-span-2",
+        className: "col-span-3 lg:col-span-1 row-span-2",
         background: (
             <AnimatedListDemo className="absolute right-0 top-2 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
         ),
@@ -118,20 +80,6 @@ const resources = [
                     </figure>
                 ))}
             </AnimatedList>
-        ),
-    },
-    {
-        Icon: Server,
-        name: "Hosting Seguro",
-        description: "Infraestructura robusta para máxima disponibilidad.",
-        action: "Conoce Más",
-        className: "col-span-3 lg:col-span-2",
-        background: (
-            <Marquee pauseOnHover className="absolute inset-0 opacity-15 dark:opacity-10 [--duration:22s]">
-                {[...Array(12)].map((_, i) => (
-                    <Server key={i} className="mx-6 text-gray-400 dark:text-gray-600" size={42} />
-                ))}
-            </Marquee>
         ),
     },
 
