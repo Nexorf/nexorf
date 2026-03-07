@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import createGlobe from "cobe";
 import {cn} from "@/shared/utils/utils";
+import Image from "next/image";
 
 export function ERPFeaturesSection() {
     const features = [
@@ -70,9 +71,11 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 const SkeletonInventory = () => {
     return (
         <div className="flex justify-center items-center h-full">
-            <img
+            <Image
                 src="/erp/inventory.png"
                 alt="Gestión de Inventario"
+                width={500}
+                height={500}
                 className="w-full h-auto rounded-lg shadow-md object-cover"
             />
         </div>
@@ -82,7 +85,7 @@ const SkeletonInventory = () => {
 const SkeletonBilling = () => {
     return (
         <div className="relative flex flex-col gap-4 items-start">
-            <img
+            <Image
                 src="/erp/billing.png"
                 alt="Facturación Electrónica"
                 className="rounded-lg shadow-md w-full object-cover"
@@ -99,7 +102,7 @@ const SkeletonReports = () => {
             className="relative flex items-center justify-center h-full group"
         >
             <IconBrandYoutubeFilled className="w-16 h-16 text-red-600 absolute z-10" />
-            <img
+            <Image
                 src="/erp/reports.png"
                 alt="Reportes con IA"
                 className="rounded-lg w-full object-cover group-hover:blur-sm transition-all duration-200"

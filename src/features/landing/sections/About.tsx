@@ -3,6 +3,7 @@
 import {useEffect, useRef, useState} from "react";
 import {motion} from "framer-motion";
 import {LinkPreview} from "@/shared/ui/organisms/LinkPreview";
+import Image from "next/image";
 
 export function About() {
     const [isVisible, setIsVisible] = useState(false);
@@ -101,9 +102,11 @@ export function About() {
                         className="flex justify-center items-center order-2 md:order-2"
                     >
 
-                        <img
+                        <Image
                             src="/nice-to-meet-you.svg"
                             alt="Nice to meet you illustration"
+                            width={500}
+                            height={500}
                             className="w-96 h-96 mb-8"
                         />
                     </div>
