@@ -1,6 +1,6 @@
 "use client";
 import {animate, motion} from "motion/react";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {GoCopilot} from "react-icons/go";
 import {cn} from "@/shared/utils/utils";
 
@@ -55,7 +55,7 @@ export const Skeleton = () => {
       animate(sequence, {
       repeat: Infinity,
       repeatDelay: 1,
-    });
+    } as any);
   }, []);
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
@@ -86,15 +86,40 @@ export const Skeleton = () => {
   );
 };
 const Sparkles = () => {
-    const sparkles = React.useMemo(() => {
-        return [...Array(12)].map(() => ({
+    // const sparkles = React.useMemo(() => {
+    //     return [...Array(12)].map(() => ({
+    //         top: Math.random() * 100,
+    //         left: Math.random() * 100,
+    //         move: Math.random() * 2 - 1,
+    //         opacity: Math.random(),
+    //         duration: Math.random() * 2 + 4
+    //     }));
+    // }, []);
+
+    const [sparkles, setSparkles] = useState<Array<{
+        top: number;
+        left: number;
+        move: number;
+        opacity: number;
+        duration: number;
+    }>>([]);
+
+    useEffect(() => {
+        // Generar sparkles solo en el cliente
+        const generatedSparkles = [...Array(12)].map(() => ({
             top: Math.random() * 100,
             left: Math.random() * 100,
             move: Math.random() * 2 - 1,
             opacity: Math.random(),
             duration: Math.random() * 2 + 4
         }));
+        setSparkles(generatedSparkles);
     }, []);
+
+     // Durante SSR y primer render, mostrar un div vacío
+    if (sparkles.length === 0) {
+        return <div className="absolute inset-0" />;
+    }
 
     return (
         <div className="absolute inset-0">

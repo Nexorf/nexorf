@@ -124,14 +124,14 @@ const PricingMegaMenu = ({isMobile = false}: PricingMegaMenuProps) => {
         >
             <button
                 className="text-sm font-medium hover:text-gray-200 transition"
-                aria-controls="services-menu"
+                aria-controls="pricing-menu"
                 aria-expanded={open}
             >
                 Precios
             </button>
 
             <div
-                id="services-menu"
+                id="pricing-menu"
                 role="menu"
                 className={`absolute left-0 top-full mt-4 z-50 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-800 p-6 grid grid-cols-2 gap-6 text-sm transition-all duration-200 ${
                     open ? "opacity-100 visible" : "opacity-0 invisible"

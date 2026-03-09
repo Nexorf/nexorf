@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, JSX } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import clsx from "clsx";
 import {
@@ -14,7 +14,7 @@ import {
 import {Button} from "@/shared/ui/atoms/Button";
 import {pricingTiers} from "@/core/data/pricing-tiers";
 
-const iconMap = {
+const iconMap: Record<string, JSX.Element> = {
     Free: <InfinityIcon className="w-8 h-8 text-gray-400" />,
     Basic: <CheckCircle className="w-8 h-8 text-blue-500" />,
     Pro: <Zap className="w-8 h-8 text-purple-500" />,
@@ -22,9 +22,20 @@ const iconMap = {
     Savage: <Flame className="w-8 h-8 text-red-500" />,
 };
 
+interface PricingTier {
+    title: string;
+    description: string;
+    price: string;
+    src: string;
+    ctaText: string;
+    ctaLink: string;
+    content: () => JSX.Element;
+    specifications: () => JSX.Element;
+}
+
 export function Tiers() {
     const [isVisible, setIsVisible] = useState(false);
-    const [active, setActive] = useState(null);
+    const [active, setActive] = useState<PricingTier | null>(null);
     const [isAnnual, setIsAnnual] = useState(false);
     const sectionRef = useRef(null);
 
@@ -45,6 +56,8 @@ export function Tiers() {
         }
         return monthly;
     };
+
+
 
     return (
         <section ref={sectionRef} className="bg-white dark:bg-black py-28 px-4 min-h-screen">

@@ -102,14 +102,14 @@ const SolutionsMegaMenu = ({isMobile = false}: SolutionsMegaMenuProps) => {
         >
             <button
                 className="text-sm font-medium hover:text-gray-200 transition"
-                aria-controls="services-menu"
+                aria-controls="solutions-menu"
                 aria-expanded={open}
             >
                 Soluciones
             </button>
 
             <div
-                id="services-menu"
+                id="solutions-menu"
                 role="menu"
                 className={`absolute left-0 top-full mt-4 z-50 w-[550px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-800 p-6 gap-6 text-sm transition-all duration-200 ${
                     open ? "opacity-100 visible" : "opacity-0 invisible"

@@ -1,4 +1,4 @@
-import {FAQ} from "@/features/faq/components/FAQ";
+import { FAQ } from "./components/FAQ";
 
 const FAQPage = () => {
     return (
