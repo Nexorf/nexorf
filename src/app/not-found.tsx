@@ -2,13 +2,16 @@
 
 import Link from "next/link";
 import {Button} from "@/shared/ui/atoms/Button";
+import Image from "next/image";
 
 export default function NotFoundPage() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center dark:from-gray-900 dark:to-black text-center px-6">
-            <img
+            <Image
                 src="/skateboard.svg"
                 alt="Skateboard"
+                width={500}
+                height={500}
                 className="w-60 h-60 mb-8 animate-bounce"
             />
 

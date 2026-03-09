@@ -2,6 +2,7 @@
 
 import { cn } from "@/shared/utils/utils";
 import {Marquee} from "@/shared/ui/organisms/magicui/marquee";
+import Image from "next/image";
 
 const companyLogos = [
     "https://logos-world.net/wp-content/uploads/2020/04/Google-Logo.png",
@@ -38,9 +39,11 @@ export function CompaniesMarquee() {
                             "filter grayscale opacity-70 transition hover:filter-none hover:opacity-100"
                         )}
                     >
-                        <img
+                        <Image
                             src={logo}
                             alt={`Logo empresa ${idx + 1}`}
+                            width={500}
+                            height={500}
                             className="max-h-12 object-contain"
                         />
                     </div>
