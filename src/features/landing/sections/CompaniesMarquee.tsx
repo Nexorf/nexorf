@@ -1,19 +1,20 @@
 "use client";
 
 import { cn } from "@/shared/utils/utils";
-import {Marquee} from "@/shared/ui/organisms/magicui/marquee";
+import { Marquee } from "@/shared/ui/organisms/magicui/marquee";
 import Image from "next/image";
 
-const companyLogos = [
-    "https://logos-world.net/wp-content/uploads/2020/04/Google-Logo.png",
-    "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
-    "https://upload.wikimedia.org/wikipedia/commons/2/20/Apple_logo_black.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+const techLogos = [
+    "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
 ];
 
-const firstRow = companyLogos.slice(0, Math.ceil(companyLogos.length / 2));
+
+const firstRow = techLogos
 
 export function CompaniesMarquee() {
     return (
@@ -21,12 +22,14 @@ export function CompaniesMarquee() {
 
             <div className="text-center mb-12 relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    Empresas que confían en nosotros
+                    Stack tecnológico de clase mundial
                 </h2>
+
                 <div className="w-20 h-1 mx-auto mt-6 rounded-full bg-gradient-to-r mb-8 from-blue-600 to-blue-900" />
+
                 <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
-                    Colaboramos con líderes de la industria para ofrecer soluciones de
-                    calidad y alto impacto.
+                    Construimos nuestras soluciones con tecnologías modernas,
+                    escalables y seguras utilizadas por empresas de todo el mundo.
                 </p>
             </div>
 
@@ -41,15 +44,16 @@ export function CompaniesMarquee() {
                     >
                         <Image
                             src={logo}
-                            alt={`Logo empresa ${idx + 1}`}
+                            alt={`Tecnología ${idx + 1}`}
                             width={500}
                             height={500}
-                            className="max-h-12 object-contain"
+                            className={`max-h-12 object-contain ${
+                                logo.includes("Nextjs") ? "dark:invert" : ""
+                            }`}
                         />
                     </div>
                 ))}
             </Marquee>
-
 
             <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white dark:from-neutral-950 to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white dark:from-neutral-950 to-transparent" />

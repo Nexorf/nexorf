@@ -12,46 +12,47 @@ export function Footer() {
                 <FooterLinkList
                     title="Producto"
                     links={[
-                        { label: "ERP", href: "#" },
-                        { label: "POS", href: "#" },
-                        { label: "Apps móviles", href: "#" },
-                        { label: "Webs", href: "#" },
-                        { label: "E-Commerce", href: "#" },
+                        { label: "ERP", href: "/servicios/erp" },
+                        { label: "POS", href: "/servicios/pos" },
+                        { label: "Apps móviles", href: "/servicios/apps-moviles" },
+                        { label: "Webs", href: "/servicios/webs" },
+                        { label: "E-Commerce", href: "/servicios/e-commerce" },
                     ]}
                 />
                 <FooterLinkList
                     title="Negocios"
                     links={[
-                        { label: "PyMEs", href: "#" },
-                        { label: "Grandes Corporaciones", href: "#" },
-                        { label: "Negocios Especializados", href: "#" },
-                        { label: "Emprendedores", href: "#" },
-                        { label: "Instituciones y Organizaciones", href: "#" },
-                    ]}
+                        { label: "Restaurantes", href: "/#restaurantes" },
+                        { label: "Panaderías", href: "/#panaderias" },
+                        { label: "Minimarkets y tiendas", href: "/#tiendas" },
+                        { label: "Farmacias", href: "/#farmacias" },
+                        { label: "Ferreterías", href: "/#ferreterias" },
+                        { label: "Educación", href: "/#educacion" },
+                        { label: "Salud", href: "/#salud" },]}
                 />
                 <FooterLinkList
                     title="Recursos"
                     links={[
                         { label: "Blog", href: "/blog" },
                         { label: "Demo", href: "#" },
-                        { label: "FAQs", href: "/faq" },
+                        { label: "FAQs", href: "/resources/faq" },
                     ]}
                 />
                 <FooterLinkList
                     title="Legal"
                     links={[
-                        { label: "Términos y condiciones", href: "#" },
-                        { label: "Política de privacidad", href: "#" },
-                        { label: "Política de cookies", href: "#" },
-                        { label: "Licencias y tecnologías", href: "#" },
+                        { label: "Términos y condiciones", href: "/legal/terms"},
+                        { label: "Política de privacidad", href: "/legal/privacy" },
+                        { label: "Política de cookies", href: "/legal/cookies" },
+                        { label: "Licencias y tecnologías", href: "/legal/licenses" },
                     ]}
                 />
                 <FooterLinkList
                     title="Empresa"
                     links={[
-                        { label: "Nosotros", href: "#about" },
+                        { label: "Nosotros", href: "/company/team" },
                         { label: "Contáctanos", href: "/contact" },
-                        { label: "Trabaja con nosotros", href: "/careers" },
+                        { label: "Trabaja con nosotros", href: "/company/careers" },
                     ]}
                 />
                 <div>
