@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const team = [
     {
         name: "Mauricio Pérez",
@@ -24,7 +26,12 @@ export function Team() {
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {team.map((member, index) => (
                         <div key={index} className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-                            <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4" />
+                            <Image 
+                            src={member.image}
+                            alt={member.name} 
+                            width={500}
+                            height={500}
+                            className="w-24 h-24 rounded-full mx-auto mb-4" />
                             <h3 className="text-xl font-semibold">{member.name}</h3>
                             <p className="text-sm text-green-500">{member.role}</p>
                             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{member.description}</p>

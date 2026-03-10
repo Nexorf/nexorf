@@ -40,21 +40,21 @@ const SolutionsMegaMenu = ({isMobile = false}: SolutionsMegaMenuProps) => {
             icon: <Microchip className="w-8 h-8 text-cyan-600" />,     // cian medio
             title: "Trasformación Digital",
             description:
-                "Sistema integral para la gestión de inventario, ventas, compras, finanzas y más. Ideal para empresas que buscan automatización total.",
+                "Impulsa tu negocio con herramientas digitales para gestionar ventas, inventario y facturación de forma más organizada y eficiente.",
         },
         {
             href: "#",
             icon: <Link2 className="w-8 h-8 -mt-1 text-pink-500" />,   // rosa medio
             title: "Integración de Sistemas",
             description:
-                "Punto de venta moderno para tiendas físicas con control de caja, inventario y ventas rápidas.",
+                 "Conectamos tus sistemas de ventas, inventario y facturación para que todo funcione en conjunto y tengas un mejor control de tu negocio día a día.",
         },
         {
             href: "#",
             icon: <Headset className="w-8 h-8 text-amber-600" />,      // naranja fuerte
             title: "Soporte y Mantenimiento",
             description:
-                "Plataforma para vender productos o servicios online con pasarelas de pago y panel de administración.",
+                "Acompañamiento técnico y mantenimiento continuo para que las herramientas digitales de tu negocio funcionen siempre de forma estable y segura.",
         },
     ];
 
