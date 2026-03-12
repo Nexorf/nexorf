@@ -43,14 +43,14 @@ const ResourcesMegaMenu = ({isMobile = false}: ResourcesMegaMenuProps) => {
                 "Artículos, noticias y novedades para estar siempre actualizado en tecnología y negocios.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <FileCode2 className="w-8 h-8 -mt-1 text-fuchsia-600" />, // fucsia
             title: "Documentación Técnica",
             description:
                 "Manuales y guías detalladas para usuarios y desarrolladores de nuestros productos.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <TableOfContents className="w-8 h-8 text-yellow-500" />,  // amarillo medio
             title: "FAQs",
             description:
