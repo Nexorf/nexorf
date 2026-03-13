@@ -1,15 +1,43 @@
 const faqs = [
     {
         question: "¿Cuánto tiempo tarda un desarrollo?",
-        answer: "Dependiendo de la complejidad, puede tomar de 2 a 6 semanas.",
+        answer: "Dependiendo de la complejidad del proyecto, el desarrollo puede tomar entre 2 y 6 semanas.",
     },
     {
         question: "¿Tienen soporte post-venta?",
-        answer: "Sí, ofrecemos soporte técnico personalizado por WhatsApp y correo.",
+        answer: "Sí, ofrecemos soporte técnico continuo por WhatsApp y correo electrónico.",
     },
     {
         question: "¿Aceptan pagos mensuales?",
-        answer: "Sí, manejamos planes flexibles según tus necesidades.",
+        answer: "Sí, manejamos planes de pago flexibles adaptados al tamaño de tu negocio.",
+    },
+    {
+        question: "¿Qué es un sistema ERP?",
+        answer: "Un ERP es un sistema que integra diferentes áreas de tu negocio como ventas, inventario, finanzas y clientes en una sola plataforma.",
+    },
+    {
+        question: "¿El sistema incluye punto de venta (POS)?",
+        answer: "Sí, nuestro sistema incluye un módulo POS que permite registrar ventas, controlar caja y gestionar productos en tiempo real.",
+    },
+    {
+        question: "¿Puedo usar el sistema desde diferentes dispositivos?",
+        answer: "Sí, nuestras aplicaciones web funcionan desde computadoras, tablets y dispositivos móviles.",
+    },
+    {
+        question: "¿Cómo protegen la seguridad de mis datos?",
+        answer: "Utilizamos buenas prácticas de seguridad, cifrado de datos y servidores confiables para proteger la información de tu empresa.",
+    },
+    {
+        question: "¿Qué métodos de pago aceptan?",
+        answer: "Aceptamos transferencias bancarias, pagos con tarjeta y otros métodos electrónicos según el país.",
+    },
+    {
+        question: "¿El sistema se puede personalizar para mi empresa?",
+        answer: "Sí, podemos adaptar el sistema según los procesos y necesidades específicas de tu negocio.",
+    },
+    {
+        question: "¿El sistema permite generar reportes?",
+        answer: "Sí, puedes generar reportes de ventas, inventario, clientes y rendimiento del negocio para tomar mejores decisiones.",
     },
 ]
 

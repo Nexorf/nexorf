@@ -1,7 +1,7 @@
+import { FAQ } from "@/features/landing/pages/resources/faq/components/FAQ";
 
-export default function Home() {
-    return (
-        <>
-        </>
-    )
-}
+const FAQPage = () => {
+  return <FAQ />;
+};
+
+export default FAQPage;
