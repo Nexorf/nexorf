@@ -65,18 +65,17 @@ const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
 };
 
 const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
-    return <p className="mt-2 text-left text-neutral-600 dark:text-neutral-300 text-sm md:text-base">{children}</p>;
+    return <p className="mt-2 text-justifytext-neutral-600 dark:text-neutral-300 text-sm md:text-base">{children}</p>;
 };
 
 const SkeletonInventory = () => {
     return (
-        <div className="flex justify-center items-center h-full">
+        <div className="mt-6 w-full h-[260px] relative">
             <Image
-                src="/erp/inventory.png"
+                src="https://images.unsplash.com/photo-1553413077-190dd305871c"
                 alt="Gestión de Inventario"
-                width={500}
-                height={500}
-                className="w-full h-auto rounded-lg shadow-md object-cover"
+                fill
+                className="rounded-lg shadow-md object-cover"
             />
         </div>
     );
@@ -84,11 +83,12 @@ const SkeletonInventory = () => {
 
 const SkeletonBilling = () => {
     return (
-        <div className="relative flex flex-col gap-4 items-start">
+        <div className="mt-6 w-full h-[260px] relative">
             <Image
-                src="/erp/billing.png"
+                src="https://images.unsplash.com/photo-1701836924569-a0b887ed1322?q=80&w=1093&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Facturación Electrónica"
-                className="rounded-lg shadow-md w-full object-cover"
+                fill
+                className="rounded-lg shadow-md object-cover"
             />
         </div>
     );
@@ -97,15 +97,18 @@ const SkeletonBilling = () => {
 const SkeletonReports = () => {
     return (
         <a
-            href="https://www.youtube.com/watch?v=ERP_REPORTS"
+            href="https://www.youtube.com/watch?v=GX79smagB2Y"
             target="_blank"
-            className="relative flex items-center justify-center h-full group"
+            rel="noopener noreferrer"
+            className="relative mt-6 w-full h-[260px] flex items-center justify-center group"
         >
-            <IconBrandYoutubeFilled className="w-16 h-16 text-red-600 absolute z-10" />
+            <IconBrandYoutubeFilled className="w-14 h-14 text-red-600 absolute z-10" />
+
             <Image
-                src="/erp/reports.png"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
                 alt="Reportes con IA"
-                className="rounded-lg w-full object-cover group-hover:blur-sm transition-all duration-200"
+                fill
+                className="rounded-lg object-cover group-hover:blur-sm transition-all duration-200"
             />
         </a>
     );
@@ -113,8 +116,8 @@ const SkeletonReports = () => {
 
 const SkeletonDeploy = () => {
     return (
-        <div className="relative h-60 flex justify-center items-center">
-            <Globe className="absolute w-full h-full -bottom-10 md:-bottom-16" />
+        <div className="relative mt-6 h-[260px] flex items-center justify-center">
+            <Globe className="w-[320px] h-[320px] -ml-15" />
         </div>
     );
 };
@@ -152,5 +155,16 @@ const Globe = ({ className }: { className?: string }) => {
         return () => globe.destroy();
     }, []);
 
-    return <canvas ref={canvasRef} style={{ width: 600, height: 600, maxWidth: "100%" }} className={className} />;
+    return (
+    <canvas
+        ref={canvasRef}
+        className={className}
+        style={{
+            width: "100%",
+            height: "100%",
+            maxWidth: "320px",
+            aspectRatio: "1"
+        }}
+    />
+);
 };
