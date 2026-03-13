@@ -9,40 +9,35 @@ export function Testimonials() {
                 "Controla tu inventario en tiempo real, evita quiebres de stock y mantén siempre actualizado el estado de tus productos.",
             name: "Gestión de Inventario",
             designation: "Control total de productos y existencias",
-            src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
-            company: "Inventario",
+            src: "https://images.unsplash.com/photo-1648824572347-517357c9c44e?q=80&w=1212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
             quote:
                 "Registra ventas de forma rápida y sencilla con un sistema de punto de venta moderno que agiliza la atención al cliente.",
             name: "Punto de Venta",
             designation: "Ventas rápidas y control de caja",
-            src: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=1200&auto=format&fit=crop",
-            company: "Ventas",
+            src: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
             quote:
                 "Obtén reportes claros sobre ingresos, productos más vendidos y desempeño de tu negocio para tomar mejores decisiones.",
             name: "Reportes y Analítica",
             designation: "Información para decisiones inteligentes",
-            src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-            company: "Reportes",
+            src: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
             quote:
                 "Automatiza procesos administrativos como compras, facturación y control financiero para ahorrar tiempo y reducir errores.",
             name: "Automatización",
             designation: "Procesos más eficientes",
-            src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
-            company: "Automatización",
+            src: "https://images.unsplash.com/photo-1718241905462-56e7b9f722f3?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
             quote:
                 "Gestiona clientes, historial de compras y fidelización para mejorar la experiencia y aumentar las ventas.",
             name: "Gestión de Clientes",
             designation: "Relación con clientes centralizada",
-            src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
-            company: "Clientes",
+            src: "https://images.unsplash.com/photo-1715635845783-7404fae223f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
     ];
 
