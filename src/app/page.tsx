@@ -11,9 +11,9 @@ export default function Home() {
   return (
       <>
           <Hero/>
+          <Services />
           <About/>
           <TechStack />
-          <Services />
           <Differentials />
           <Testimonials />
           <Resources />

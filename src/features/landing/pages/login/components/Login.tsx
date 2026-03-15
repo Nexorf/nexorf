@@ -4,35 +4,42 @@ import { useState } from "react";
 import Link from "next/link";
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { ShineBorder } from "@/shared/ui/organisms/ShineBorder";
 
-interface LoginForm {
-  email: string;
-  password: string;
-}
+// ─── 1. ESQUEMA ZOD: aquí defines las reglas de validación ───────────────────
+const loginSchema = z.object({
+  email: z
+    .string()
+    .min(1, "El correo es obligatorio")
+    .email("El formato del correo no es válido"),
+  password: z
+    .string()
+    .min(1, "La contraseña es obligatoria")
+    .min(6, "La contraseña debe tener al menos 6 caracteres"),
+});
+
+// Tipo inferido automáticamente desde el esquema (no necesitas escribirlo a mano)
+type LoginFormData = z.infer<typeof loginSchema>;
 
 export function Login() {
-  const [form, setForm] = useState<LoginForm>({ email: "", password: "" });
-  const [errors, setErrors] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
 
-  const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  const validatePassword = (password: string) => password.length >= 6;
+  // ─── 2. REACT-HOOK-FORM: maneja el formulario y conecta con zod ──────────
+  const {
+    register,          // conecta cada input al formulario
+    handleSubmit,      // envuelve el onSubmit con validación automática
+    formState: { errors, isSubmitting }, // errores y estado de envío
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema), // zod valida los datos
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const newErrors = { email: "", password: "" };
-    if (!validateEmail(form.email)) newErrors.email = "Email inválido";
-    if (!validatePassword(form.password)) newErrors.password = "Mínimo 6 caracteres";
-    setErrors(newErrors);
-    if (!newErrors.email && !newErrors.password) {
-      console.log("Login data:", form);
-    }
+  // ─── 3. SUBMIT: solo se ejecuta si zod valida correctamente ─────────────
+  const onSubmit = (data: LoginFormData) => {
+    // Por ahora solo UI, sin backend
+    console.log("Login data (validado por zod):", data);
   };
 
   return (
@@ -61,7 +68,8 @@ export function Login() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            {/* handleSubmit de react-hook-form llama a onSubmit solo si zod aprueba */}
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
 
               {/* EMAIL */}
               <div className="space-y-1.5">
@@ -71,16 +79,15 @@ export function Login() {
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input
+                    {...register("email")}  // ← así se conecta el input a react-hook-form
                     type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
                     placeholder="nombre@ejemplo.com"
                     className="w-full pl-10 pr-4 py-2.5 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-500/40 focus:border-violet-500 transition-all"
                   />
                 </div>
+                {/* El error viene de zod, a través de react-hook-form */}
                 {errors.email && (
-                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
                 )}
               </div>
 
@@ -92,10 +99,8 @@ export function Login() {
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input
+                    {...register("password")}  // ← conecta password a react-hook-form
                     type={showPassword ? "text" : "password"}
-                    name="password"
-                    value={form.password}
-                    onChange={handleChange}
                     placeholder="••••••••"
                     className="w-full pl-10 pr-10 py-2.5 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-500/40 focus:border-violet-500 transition-all"
                   />
@@ -108,14 +113,15 @@ export function Login() {
                   </button>
                 </div>
                 {errors.password && (
-                  <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+                  <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>
                 )}
               </div>
 
               {/* LOGIN BUTTON */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-sm hover:opacity-90 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md"
+                disabled={isSubmitting}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-sm hover:opacity-90 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 Iniciar sesión
                 <ArrowRight className="w-4 h-4" />
