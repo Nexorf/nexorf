@@ -86,7 +86,6 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   }, [data, theme]);
 
   return (
-    // @ts-expect-error – Cloud types are loose
     <Cloud {...cloudProps}>
       {renderedIcons}
     </Cloud>
