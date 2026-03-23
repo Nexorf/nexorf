@@ -33,14 +33,14 @@ const BusinessMegaMenu = ({isMobile = false}: BusinessMegaMenuProps) => {
                 "Gestiona medicamentos, inventario y ventas con un sistema que facilita el control de stock, facturación y atención ágil al cliente.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Wrench className="w-8 h-8 -mt-1 text-rose-600" />, // rojo intenso
             title: "Ferreterías",
             description:
                 "Controla productos, inventario y ventas en tu ferretería con herramientas que simplifican la facturación y el seguimiento de tus artículos.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <BookOpen className="w-8 h-8 text-amber-400" />,   // amarillo cálido
             title: "Educación",
             description:

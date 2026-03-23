@@ -41,14 +41,14 @@ const PricingMegaMenu = ({isMobile = false}: PricingMegaMenuProps) => {
                 "Sistema integral para la gestión de inventario, ventas, compras, finanzas y más. Ideal para empresas que buscan automatización total.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <CreditCard className="w-8 h-8 -mt-1 text-red-600" />, // rojo oscuro
             title: "POS",
             description:
                 "Punto de venta moderno para tiendas físicas con control de caja, inventario y ventas rápidas.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <ShoppingBag className="w-8 h-8 text-yellow-400" />, // amarillo claro
             title: "E-commerce",
             description:
@@ -65,14 +65,14 @@ const PricingMegaMenu = ({isMobile = false}: PricingMegaMenuProps) => {
                 "Desarrollo de sitios web profesionales, institucionales o corporativos optimizados para SEO.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <TabletSmartphone className="w-8 h-8 text-blue-600 mt-0" />, // azul medio
             title: "Móvil",
             description:
                 "Aplicaciones móviles para Android y iOS con funcionalidades a medida como notificaciones, GPS y login.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Palette className="w-8 h-8 text-purple-600" />,      // púrpura
             title: "Personalizado",
             description:

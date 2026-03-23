@@ -33,14 +33,14 @@ const CompanyMegaMenu = ({isMobile = false}: CompanyMegaMenuProps) => {
                 "Conoce nuestra historia, misión y valores que nos guían en cada proyecto y servicio.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <History className="w-8 h-8 -mt-1 text-pink-500" />, // rosa
             title: "Historia y misión",
             description:
                 "Trayectoria que nos define y el propósito que impulsa nuestra labor diaria.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <HandPlatter className="w-8 h-8 text-yellow-500" />, // amarillo medio
             title: "Equipo",
             description:
@@ -57,14 +57,14 @@ const CompanyMegaMenu = ({isMobile = false}: CompanyMegaMenuProps) => {
                 "Consulta las políticas y condiciones que rigen el uso de nuestros servicios.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <FileText className="w-8 h-8 -mt-1 text-rose-400" />, // rojo suave
             title: "Políticas de privacidad",
             description:
                 "Comprometidos con la protección y confidencialidad de tus datos personales.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Briefcase className="w-8 h-8 text-amber-600" />,    // naranja intenso
             title: "Trabaja con nosotros",
             description:

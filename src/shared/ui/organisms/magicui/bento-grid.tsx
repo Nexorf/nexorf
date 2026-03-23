@@ -2,6 +2,7 @@ import {ArrowRightIcon} from "@radix-ui/react-icons";
 import React, {ComponentPropsWithoutRef, ReactNode} from "react";
 import {cn} from "@/shared/utils/utils";
 import {Button} from "@/shared/ui/atoms/Button";
+import {LucideIcon} from "lucide-react";
 
 
 interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
@@ -13,7 +14,7 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"a"> {
     name: string;
     className: string;
     background: ReactNode;
-    Icon: React.ElementType;
+    Icon: LucideIcon;
     description: string;
     href: string;
     cta: string;
