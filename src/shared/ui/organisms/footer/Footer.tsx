@@ -22,19 +22,19 @@ export function Footer() {
                 <FooterLinkList
                     title="Negocios"
                     links={[
-                        { label: "Restaurantes", href: "/#restaurantes" },
-                        { label: "Panaderías", href: "/#panaderias" },
-                        { label: "Minimarkets y tiendas", href: "/#tiendas" },
-                        { label: "Farmacias", href: "/#farmacias" },
-                        { label: "Ferreterías", href: "/#ferreterias" },
-                        { label: "Educación", href: "/#educacion" },
-                        { label: "Salud", href: "/#salud" },]}
+                        { label: "Restaurantes", href: "/restaurantes" },
+                        { label: "Panaderías", href: "/panaderias" },
+                        { label: "Minimarkets y tiendas", href: "/tiendas" },
+                        { label: "Farmacias", href: "/farmacias" },
+                        { label: "Ferreterías", href: "/ferreterias" },
+                        { label: "Educación", href: "/educacion" },
+                        { label: "Salud", href: "/salud" },]}
                 />
                 <FooterLinkList
                     title="Recursos"
                     links={[
                         { label: "Blog", href: "/blog" },
-                        { label: "Demo", href: "#" },
+                        { label: "Demo", href: "/demo" },
                         { label: "FAQs", href: "/resources/faq" },
                     ]}
                 />
@@ -50,7 +50,7 @@ export function Footer() {
                 <FooterLinkList
                     title="Empresa"
                     links={[
-                        { label: "Nosotros", href: "/company/team" },
+                        { label: "Nosotros", href: "/company" },
                         { label: "Contáctanos", href: "/contact" },
                         { label: "Trabaja con nosotros", href: "/company/careers" },
                     ]}
