@@ -33,14 +33,14 @@ const ServicesMegaMenu = ({isMobile = false}: ServicesMegaMenuProps) => {
                 "Sistema integral para la gestión de inventario, ventas, compras, finanzas y más. Ideal para empresas que buscan automatización total.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <FileText className="w-8 h-8 -mt-1 text-red-500"/>,
             title: "POS",
             description:
                 "Punto de venta moderno para tiendas físicas con control de caja, inventario y ventas rápidas.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <ShoppingCart className="w-8 h-8 text-amber-500"/>,
             title: "E-commerce",
             description:
@@ -50,21 +50,21 @@ const ServicesMegaMenu = ({isMobile = false}: ServicesMegaMenuProps) => {
 
     const column2Items: MegaMenuItemProps[] = [
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Globe className="w-8 h-8 -mt-1 text-lime-500"/>,
             title: "Web",
             description:
                 "Desarrollo de sitios web profesionales, institucionales o corporativos optimizados para SEO.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <TabletSmartphone className="w-8 h-8 text-blue-500 mt-0"/>,
             title: "Móvil",
             description:
                 "Aplicaciones móviles para Android y iOS con funcionalidades a medida como notificaciones, GPS y login.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Palette className="w-8 h-8 text-purple-500"/>,
             title: "Personalizado",
             description:

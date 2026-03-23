@@ -43,14 +43,14 @@ const SolutionsMegaMenu = ({isMobile = false}: SolutionsMegaMenuProps) => {
                 "Impulsa tu negocio con herramientas digitales para gestionar ventas, inventario y facturación de forma más organizada y eficiente.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Link2 className="w-8 h-8 -mt-1 text-pink-500" />,   // rosa medio
             title: "Integración de Sistemas",
             description:
                  "Conectamos tus sistemas de ventas, inventario y facturación para que todo funcione en conjunto y tengas un mejor control de tu negocio día a día.",
         },
         {
-            href: "#",
+            href: "/coming-soon",
             icon: <Headset className="w-8 h-8 text-amber-600" />,      // naranja fuerte
             title: "Soporte y Mantenimiento",
             description:

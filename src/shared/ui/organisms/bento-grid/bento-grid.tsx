@@ -1,5 +1,4 @@
 import {cn} from "@/shared/utils/utils";
-import {GlowingEffect} from "@/shared/ui/organisms/glowing/GlowingEffect";
 
 export const BentoGrid = ({
                               className,

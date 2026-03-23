@@ -9,54 +9,57 @@ import {
     FileText,
     Store,
 } from "lucide-react"
-import {BentoGrid, BentoGridItem} from "@/shared/ui/organisms/bento-grid/bento-grid";
-import {CardSkeletonContainer, Skeleton} from "@/shared/ui/organisms/card/cards-demo-3";
-
+import { FocusCards } from "@/components/ui/focus-cards";
 
 const services = [
     {
         title: "ERP Completo",
         description: "Sistemas inteligentes para ventas, inventario, compras y reportes detallados",
-        icon: <FileText className="h-10 w-10 text-neutral-500"/>,
-        href: "/services/erp",
-        className: "lg:col-span-2",
+        hoverDetail: "Administra toda tu empresa desde un solo lugar: ventas, compras, inventario, cuentas por pagar y por cobrar, reportes avanzados y facturación electrónica integrada con el SRI. Diseñado para negocios que quieren crecer con orden y control total.",
+        icon: <FileText className="h-10 w-10"/>,
+        link: "/services/erp",
+        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop", // Business Dashboard
     },
     {
         title: "POS Moderno",
         description: "Puntos de venta para tiendas, ferreterías, farmacias y más sectores",
-        icon: <CreditCard className="h-10 w-10 text-neutral-500"/>,
-        href: "/services/pos",
-        className: "lg:col-span-1",
+        hoverDetail: "Sistema de punto de venta rápido, intuitivo y adaptado a cada tipo de negocio. Soporta múltiples cajas, impresión de tickets, descuentos, métodos de pago mixtos y sincronización en tiempo real con tu inventario.",
+        icon: <CreditCard className="h-10 w-10"/>,
+        link: "/services/pos",
+        src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2550&auto=format&fit=crop", // Retail POS
     },
     {
         title: "Apps Móviles",
         description: "Aplicaciones nativas para Android e iOS con diseño intuitivo",
-        icon: <Smartphone className="h-10 w-10 text-neutral-500"/>,
-        href: "/services/apps",
-        className: "lg:col-span-1",
+        hoverDetail: "Desarrollamos aplicaciones móviles a medida para Android e iOS con interfaces modernas y fluidas. Desde apps de gestión interna hasta plataformas de e-commerce o delivery, adaptamos cada funcionalidad a tu modelo de negocio.",
+        icon: <Smartphone className="h-10 w-10"/>,
+        link: "/services/apps",
+        src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2340&auto=format&fit=crop", // Mobile App
     },
     {
         title: "Sitios Web",
         description: "Landing pages y sitios web responsivos y optimizados",
-        icon: <Globe className="h-10 w-10  text-neutral-500"/>,
-        href: "/services/websites",
-        className: "lg:col-span-1",
+        hoverDetail: "Creamos sitios web modernos, veloces y optimizados para SEO. Desde landing pages de alto impacto hasta portales corporativos, cada proyecto está diseñado para convertir visitantes en clientes desde el primer clic.",
+        icon: <Globe className="h-10 w-10"/>,
+        link: "/services/websites",
+        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2344&auto=format&fit=crop", // Web Design/Laptop
     },
     {
         title: "Soluciones Personalizadas",
         description: "Sistemas a medida para necesidades específicas de tu negocio",
-        icon: <Store className="h-10 w-10  text-neutral-500"/>,
-        href: "/services/custom",
-        className: "lg:row-span-2",
+        hoverDetail: "Cuando los sistemas estándar no son suficientes, creamos soluciones a la medida de tu empresa. Analizamos tus procesos, diseñamos la arquitectura ideal y desarrollamos software escalable que se adapta exactamente a como trabajas.",
+        icon: <Store className="h-10 w-10"/>,
+        link: "/services/custom",
+        src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2340&auto=format&fit=crop", // Architecture/Code workspace
     },
     {
         title: "E-commerce",
         description: "Tiendas online con pasarela de pago e integración con redes sociales",
-        icon: <ShoppingCart className="h-10 w-10 text-neutral-500"/>,
-        href: "/services/ecommerce",
-        className: "lg:col-span-2",
+        hoverDetail: "Lanza tu tienda online con todo lo que necesitas: catálogo de productos, carrito de compras, pasarela de pago segura, gestión de pedidos e integración con redes sociales para vender más y en más canales.",
+        icon: <ShoppingCart className="h-10 w-10"/>,
+        link: "/services/ecommerce",
+        src: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2340&auto=format&fit=crop", // Online Payment/Card
     },
-
 ]
 
 export function Services() {
@@ -74,7 +77,7 @@ export function Services() {
             ([entry]) => {
                 if (entry.isIntersecting) setIsVisible(true);
             },
-            { threshold: 0.2 }
+            {threshold: 0.1}
         );
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
@@ -89,30 +92,16 @@ export function Services() {
                     }`}
                 >
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">¿Qué ofrecemos?</h2>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                            Nuestros servicios más solicitados
+                        </h2>
                         <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-600 to-blue-900"></div>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                            💡 Sistemas inteligentes, visuales y eficientes para distintos sectores
+                            💡 Sistemas más eficientes dentro de tu negocio y sitio personal
                         </p>
                     </div>
 
-                    <BentoGrid className="max-w-7xl mx-auto">
-                        {services.map((service, index) => (
-                            <BentoGridItem
-                                key={index}
-                                title={service.title}
-                                description={service.description}
-                                icon={service.icon}
-                                href={service.href}
-                                className={service.className}
-                                header={
-                                    <CardSkeletonContainer>
-                                        <Skeleton/>
-                                    </CardSkeletonContainer>
-                                }
-                            />
-                        ))}
-                    </BentoGrid>
+                    <FocusCards cards={services} />
                 </div>
             </div>
         </section>
