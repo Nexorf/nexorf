@@ -12,11 +12,11 @@ export function Footer() {
                 <FooterLinkList
                     title="Producto"
                     links={[
-                        { label: "ERP", href: "/servicios/erp" },
-                        { label: "POS", href: "/servicios/pos" },
-                        { label: "Apps móviles", href: "/servicios/apps-moviles" },
-                        { label: "Webs", href: "/servicios/webs" },
-                        { label: "E-Commerce", href: "/servicios/e-commerce" },
+                        { label: "ERP", href: "/services/erp" },
+                        { label: "POS", href: "/coming-soon" },
+                        { label: "Apps móviles", href: "/coming-soon" },
+                        { label: "Webs", href: "/coming-soon" },
+                        { label: "E-Commerce", href: "/coming-soon" },
                     ]}
                 />
                 <FooterLinkList
@@ -33,26 +33,26 @@ export function Footer() {
                 <FooterLinkList
                     title="Recursos"
                     links={[
-                        { label: "Blog", href: "/blog" },
-                        { label: "Demo", href: "#" },
+                        { label: "Blog", href: "/coming-soon" },
+                        { label: "Demo", href: "/coming-soon" },
                         { label: "FAQs", href: "/resources/faq" },
                     ]}
                 />
                 <FooterLinkList
                     title="Legal"
                     links={[
-                        { label: "Términos y condiciones", href: "/legal/terms"},
-                        { label: "Política de privacidad", href: "/legal/privacy" },
-                        { label: "Política de cookies", href: "/legal/cookies" },
-                        { label: "Licencias y tecnologías", href: "/legal/licenses" },
+                        { label: "Términos y condiciones", href: "/coming-soon"},
+                        { label: "Política de privacidad", href: "/coming-soon" },
+                        { label: "Política de cookies", href: "/coming-soon" },
+                        { label: "Licencias y tecnologías", href: "/coming-soon" },
                     ]}
                 />
                 <FooterLinkList
                     title="Empresa"
                     links={[
-                        { label: "Nosotros", href: "/company/team" },
+                        { label: "Nosotros", href: "/coming-soon" },
                         { label: "Contáctanos", href: "/contact" },
-                        { label: "Trabaja con nosotros", href: "/company/careers" },
+                        { label: "Trabaja con nosotros", href: "/coming-soon" },
                     ]}
                 />
                 <div>
