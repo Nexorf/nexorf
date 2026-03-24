@@ -26,7 +26,7 @@ const CompanyMegaMenu = ({isMobile = false}: CompanyMegaMenuProps) => {
 
     const column1Items: MegaMenuItemProps[] = [
         {
-            href: "/pricing",
+            href: "/company",
             icon: <Users className="w-8 h-8 text-indigo-500" />,      // índigo
             title: "Sobre Nosotros",
             description:
