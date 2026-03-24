@@ -20,7 +20,6 @@ const Header = ({ className = "" }: { className?: string }) => {
                 <HeaderLogoLink />
                 <nav className="hidden md:flex items-center space-x-8">
                     <ServicesMegaMenu />
-                    <SolutionsMegaMenu />
                     <ResourcesMegaMenu />
                     <BusinessMegaMenu />
                     <PricingMegaMenu />

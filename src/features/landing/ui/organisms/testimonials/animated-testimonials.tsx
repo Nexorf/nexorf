@@ -9,7 +9,6 @@ type Testimonial = {
   name: string;
   designation: string;
   src: string;
-  company: string;
 };
 
 export const AnimatedTestimonials = ({
@@ -149,7 +148,6 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
             <motion.p className="mt-3 text-sm italic text-gray-500 dark:text-neutral-600 items-end flex justify-end">
-              <span className="font-semibold">&quot;{testimonials[active].company}&quot;</span>
             </motion.p>
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
